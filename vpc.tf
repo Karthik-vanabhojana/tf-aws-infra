@@ -9,8 +9,8 @@ resource "aws_vpc" "my_vpc" {
 }
 
 resource "aws_subnet" "webapp_subnet" {
-  vpc_id     = aws_vpc.my_vpc.id
-  cidr_block = var.webapp_subnet_cidr_block
+  vpc_id            = aws_vpc.my_vpc.id
+  cidr_block        = var.webapp_subnet_cidr_block
   availability_zone = var.webapp_availability
 
   tags = {
@@ -21,14 +21,14 @@ resource "aws_subnet" "webapp_subnet" {
 
 
 resource "aws_subnet" "db_subnet" {
-  vpc_id     = aws_vpc.my_vpc.id
-  cidr_block = var.db_subnet_cidr_block
-  availability_zone = var.db_availability_main
-    map_public_ip_on_launch = false
+  vpc_id                  = aws_vpc.my_vpc.id
+  cidr_block              = var.db_subnet_cidr_block
+  availability_zone       = var.db_availability_main
+  map_public_ip_on_launch = false
 
 
   tags = {
-    Name =var.db_subnet_name
+    Name = var.db_subnet_name
   }
 }
 
@@ -36,14 +36,14 @@ resource "aws_subnet" "db_subnet" {
 
 resource "aws_subnet" "db_subnet_secondary" {
 
-  vpc_id     = aws_vpc.my_vpc.id
-  cidr_block = var.db_subnet_secandary_cidr_block
-  availability_zone = var.db_availability
+  vpc_id                  = aws_vpc.my_vpc.id
+  cidr_block              = var.db_subnet_secandary_cidr_block
+  availability_zone       = var.db_availability
   map_public_ip_on_launch = false
 
 
   tags = {
-    Name =var.db_subnet_secondary_name
+    Name = var.db_subnet_secondary_name
   }
 }
 

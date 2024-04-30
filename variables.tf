@@ -12,8 +12,8 @@ variable "webapp_subnet_cidr_block" {
   default     = "10.0.1.0/24"
 }
 variable "db_subnet_name" {
-  type = string
-  default =  "db-subnet"
+  type    = string
+  default = "db-subnet"
 }
 variable "db_subnet_cidr_block" {
   description = "The CIDR block for the db subnet"
@@ -31,10 +31,10 @@ variable "identifier" {
   default = "sql-instance-demo"
 }
 variable "engine" {
-  default =  "mysql"
+  default = "mysql"
 }
 variable "engine_version" {
-  default =  "8.0.28"
+  default = "8.0.28"
 }
 variable "instance_class" {
   default = "db.t3.micro"
@@ -58,10 +58,10 @@ variable "user_name" {
   default = "admin_root_user"
 }
 variable "public_access" {
-  default =  false
+  default = false
 }
 variable "db_tag" {
-  default ="db_instance"
+  default = "db_instance"
 }
 variable "db_availability" {
   default = "us-east-1b"
@@ -78,7 +78,7 @@ variable "database_Name" {
   default = "webapp_user"
 }
 variable "vpc_name" {
-  type = string
+  type    = string
   default = "webapp-vpc"
 }
 variable "parameter_name" {
@@ -102,11 +102,11 @@ variable "parameter_value" {
 }
 
 variable "web_app_subnet_name" {
-  type = string
+  type    = string
   default = "webapp-subnet"
 }
 
 variable "web_app_route_internet_cidr_block" {
-  type = string
+  type    = string
   default = "0.0.0.0/0"
 }
